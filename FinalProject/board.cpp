@@ -3,9 +3,7 @@
 #include<QGraphicsScene>
 #include <QGraphicsRectItem>
 
-board::board(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::board)
+board::board(QWidget *parent)
 {
     ui->setupUi(this);
 }
@@ -13,6 +11,7 @@ board::board(QWidget *parent) :
 void board::start(){
     scene = new QGraphicsScene();
     scene -> setSceneRect(0,0,725,500);
+
 }
 
 board::~board()

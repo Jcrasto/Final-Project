@@ -19,5 +19,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
 gboard = new board (this);
+gboard ->show();
 gboard -> start();
 }
