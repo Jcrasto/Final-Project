@@ -2,6 +2,9 @@
 #define BOARD_H
 #include <QGraphicsScene>
 #include <QWidget>
+#include <QGraphicsView>
+#include "balloon.h"
+#include <QObject>
 
 namespace Ui {
 class board;
@@ -19,7 +22,8 @@ public:
     void start();
 
     //Public Variables
-    QGraphicsScene *scene;
+    QGraphicsScene *GraphicsScene;
+    balloon* bloon;
 
 private:
     Ui::board *ui;

@@ -2,16 +2,18 @@
 #include "ui_board.h"
 #include<QGraphicsScene>
 #include <QGraphicsRectItem>
+#include <QGraphicsView>
+#include <balloon.h>
+#include <QImage>
 
 board::board(QWidget *parent)
-{
-    ui->setupUi(this);
-}
+{}
 
 void board::start(){
-    scene = new QGraphicsScene();
-    scene -> setSceneRect(0,0,725,500);
+    GraphicsScene = new QGraphicsScene();
+    GraphicsScene -> setSceneRect(0,0,725,500);
 
+   bloon = new balloon();
 }
 
 board::~board()

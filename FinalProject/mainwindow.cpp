@@ -22,3 +22,7 @@ gboard = new board (this);
 gboard ->show();
 gboard -> start();
 }
+
+void MainWindow::globalboard(board *b){
+    gboard = b;
+}
