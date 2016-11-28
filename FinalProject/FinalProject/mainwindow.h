@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void globalboard(board* b);
+
 
 private slots:
 
@@ -22,7 +22,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    board *gboard;
+    board * gboard;
 };
 
 #endif // MAINWINDOW_H

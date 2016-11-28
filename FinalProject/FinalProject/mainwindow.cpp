@@ -19,10 +19,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
 gboard = new board (this);
-gboard ->show();
-gboard -> start();
+this-> setCentralWidget(gboard);
+//gboard ->show();
+//gboard -> start();
+
 }
 
-void MainWindow::globalboard(board *b){
-    gboard = b;
-}
+
