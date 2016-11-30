@@ -16,14 +16,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//causing program to fail to compile
 void MainWindow::on_pushButton_clicked()
 {
     gboard = new board (this);
     this-> setCentralWidget(gboard);
 
-//gboard ->show();
-
-//gboard -> start();
+    gboard ->show();
+    //gboard -> start();
 
 }
 

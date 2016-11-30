@@ -1,3 +1,5 @@
+/*
+
 #ifndef BALLOON_H
 #define BALLOON_H
 
@@ -14,7 +16,6 @@ class balloon: public QGraphicsItem{
 
 public:
     balloon(QGraphicsItem* parent =0);
-
     void keyPressEvent(QKeyEvent* event);
 
 public slots:
@@ -34,3 +35,5 @@ private:
 };
 
 #endif // BALLOON_H
+
+*/

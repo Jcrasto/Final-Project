@@ -1,3 +1,4 @@
+/*
 #include "balloon.h"
 #include <QKeyEvent>
 #include <QGraphicsScene>
@@ -5,6 +6,7 @@
 #include "mainwindow.h"
 #include "board.h"
 #include <QGraphicsItem>
+#include <QGraphicsPixmapItem>
 
 extern board * gboard;
 
@@ -19,3 +21,4 @@ void balloon:: keyPressEvent(QKeyEvent *event){
         if(x_balloon < )
     }
 }
+*/

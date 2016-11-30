@@ -5,7 +5,7 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QObject>
-#include "mainwindow.h"
+//#include "mainwindow.h"
 #include <QMainWindow>
 #include <iostream>
 #include <QTimer>
@@ -33,6 +33,10 @@ public:
     //Public Variables
     QGraphicsScene *GraphicsScene;
 
+   // void keyPressEvent(QKeyEvent* kevent);
+    //void paintEvent(QPaintEvent * pevent);
+    //void showEvent (QShowEvent * sevent);
+
 private:
     Ui::board *ui;
 
@@ -50,9 +54,10 @@ private:
     qreal frames;
 
     QWidget * Board;
-    //QLabel**labels;
 
     //QWidget * top;
+
+    bool gameover;
 
 };
 

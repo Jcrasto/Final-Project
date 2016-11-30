@@ -22,17 +22,14 @@ board::board(QWidget *parent): ui(new Ui::board)
    //GraphicsScene = new QGraphicsScene(this);
 
    setFixedSize(700,700);
-
+   gameover = false;
    //frames= 45;//frames per second
 
    //GraphicsScene -> setSceneRect(0,0,725,500);
 
     //set position
     //bloon = new balloon();
-
-
    //bground = QImage (":/images/Dartboard.png");
-
 
    QVBoxLayout * overall_layout = new QVBoxLayout;
    this -> setLayout(overall_layout);
@@ -51,11 +48,8 @@ board::board(QWidget *parent): ui(new Ui::board)
    Square->setGeometry(QRect());
    Square -> setSpacing(0);
 
-
    //initialize balloon
    balloon_posit = new QPoint (10, 200);
-
-
 
 }
 
@@ -64,3 +58,14 @@ board::~board()
 {
     delete ui;
 }
+
+/*
+void board:: keyPressEvent(QKeyEvent *kevent){
+    if(gameover = false){
+        int y_balloon = balloon_posit ->  ry();
+        if (kevent ->key() == Qt::Key_Up){
+
+        }
+    }
+}
+*/
