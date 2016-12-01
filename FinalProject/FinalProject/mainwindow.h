@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "board.h"
+
 #include <QMainWindow>
+#include "board.h"
+#include "balloon.h"
 
 namespace Ui {
 class MainWindow;
@@ -10,6 +12,9 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+public slots:
+    void game_over();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -22,7 +27,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    board * gboard;
+    board* gboard;
+    balloon * bloon;
 };
 
 #endif // MAINWINDOW_H

@@ -11,42 +11,78 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 
-board::board(QWidget *parent): ui(new Ui::board)
+board::board(QWidget *parent)
 {
-   ui ->setupUi(this);
-   //QPixmap * mypix = new Qpixmap (":/image/Dartboard.png")
-   //ui->label->setPixmap(mypix);
-   //delete mypix;
 
    /* to create a top bar */
    //QVBoxLayout * layout = new QVBoxLayout;
    //top = new QWidget;
 
+   GraphicsScene = new QGraphicsScene(this);
+   GraphicsScene -> setSceneRect(0,0,725,500);
+   setBackgroundBrush(QBrush());
+   setScene(GraphicsScene);
+
+   setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+  //code from different approach to creating the balloon without a seperate class
+  /*
+   //gameover = false;
+   //frames= 45;//frames per second
+
+
+    //set position
+    //bloon = new balloon();
+   //bground = QImage (":/images/Dartboard.png");
+
+   //QVBoxLayout * overall_layout = new QVBoxLayout;
+   //this -> setLayout(overall_layout);
+
+   //balloon image
+   QString filename(":/images/balloon.png");
+   balloon_image = new QPixmap (filename);
+
+   //creating the board
    Board = new QWidget;
-   Board -> setFixedSize(700,700);
+   Board-> setFixedSize(600,600);
+   Board -> setContentsMargins(10,10,10,10);
+   QGridLayout * Square = new QGridLayout(Board);
+   overall_layout -> addWidget(Board,0,Qt::AlignCenter);
+   this-> setLayout(overall_layout);
+   Square->setGeometry(QRect());
+   Square -> setSpacing(0);
 
-  //set position
-   x_balloon =  200;
-   y_balloon = 200;
+   //initialize balloon
+   balloon_posit = new QPoint (10, 200);
 
-   bground = new QPixmap (":/images/Dartboard.png");
-
-}
-
-
-//board::board(QWidget *parent){}
-
-//start function
-/*
- void board::start(){
-    GraphicsScene = new QGraphicsScene();
-    GraphicsScene -> setSceneRect(0,0,725,500);
+  */
 
    bloon = new balloon();
+   bloon->setPos(20,250);
+   bloon-> setFlag (QGraphicsItem::ItemIsFocusable);
+   bloon->setFocus();
+   GraphicsScene -> addItem(bloon);
+
+   QGraphicsView* view = new QGraphicsView(GraphicsScene);
+   show();
+
 }
-*/
+
 
 board::~board()
 {
-    delete ui;
+    //delete ui;
+    delete GraphicsScene;
 }
+
+/*
+void board:: keyPressEvent(QKeyEvent *kevent){
+    if(gameover = false){
+        int y_balloon = balloon_posit ->  ry();
+        if (kevent ->key() == Qt::Key_Up){
+
+        }
+    }
+}
+*/

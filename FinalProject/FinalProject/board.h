@@ -5,44 +5,62 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QObject>
-#include "mainwindow.h"
+//#include "mainwindow.h"
 #include <QMainWindow>
 #include <iostream>
+#include <QTimer>
+#include <QtGlobal>
+#include "balloon.h"
+#include <QLabel>
 
+//extern class MainWindow;
 
-
+/*
 namespace Ui {
 class board;
 }
+*/
 
 class board : public QGraphicsView
 {
-    Q_OBJECT
+    //Q_OBJECT
 
  public slots:
    // void start();
 
 public:
-    board(QWidget *parent = 0);
+    explicit board(QWidget *parent = 0);
     virtual~board();
 
     //Public Variables
     QGraphicsScene *GraphicsScene;
 
+   // void keyPressEvent(QKeyEvent* kevent);
+    //void paintEvent(QPaintEvent * pevent);
+    //void showEvent (QShowEvent * sevent);
+
+    balloon* bloon;
+
+    int interval;
+
 private:
-    Ui::board *ui;
+   //Ui::board *ui;
 
-    //baloon position and size
-    double x_balloon, y_balloon;
-    const double balloon_width = 20.0;
-    const double balloon_height = 20.0;
+   // balloon * bloon;
+    //QPixmap * bground;
+    //const QPixmap * balloon_image;
 
-    QPixmap * bground;
-    QPixmap * balloon_image;
+    //balloon position
+    //QPoint * balloon_posit;
+    //QImage balloon_image;
+    //QImage bground;
 
-    QWidget * Board;
+    //QTimer timer;
+    //+ QWidget * Board;
 
     //QWidget * top;
+
+    bool gameover;
 
 };
 
