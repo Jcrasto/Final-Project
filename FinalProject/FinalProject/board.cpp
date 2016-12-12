@@ -10,6 +10,10 @@
 #include <QGraphicsPixmapItem>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QPushButton>
+#include <QKeyEvent>
+#include <QTimer>
+#include <iostream>
 
 board::board(QWidget *parent)
 {
