@@ -12,6 +12,9 @@
 #include <QtGlobal>
 #include "balloon.h"
 #include <QLabel>
+#include <QKeyEvent>
+#include <QGraphicsPixmapItem>
+#include <QPixmap>
 
 //extern class MainWindow;
 
@@ -34,6 +37,8 @@ public:
 
     //Public Variables
     QGraphicsScene *GraphicsScene;
+    
+    void game_over(); 
 
    // void keyPressEvent(QKeyEvent* kevent);
     //void paintEvent(QPaintEvent * pevent);
@@ -46,21 +51,8 @@ public:
 private:
    //Ui::board *ui;
 
-   // balloon * bloon;
-    //QPixmap * bground;
-    //const QPixmap * balloon_image;
-
-    //balloon position
-    //QPoint * balloon_posit;
-    //QImage balloon_image;
-    //QImage bground;
-
     //QTimer timer;
     //+ QWidget * Board;
-
-    //QWidget * top;
-
-    bool gameover;
 
 };
 
