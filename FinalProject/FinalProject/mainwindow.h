@@ -14,7 +14,6 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public slots:
-    void game_over();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
