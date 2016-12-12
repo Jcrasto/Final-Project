@@ -27,11 +27,4 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
-void MainWindow::game_over(){
-    QWidget* central = this -> centralWidget();
-    central -> setParent(nullptr);
-    ui ->setupUi(this);
-    this -> setFixedSize(700,700);
-}
-
 
