@@ -5,6 +5,8 @@
 #include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
+#include "darts.h"
+
 //#include "mainwindow.h"
 //#include "board.h"
 
