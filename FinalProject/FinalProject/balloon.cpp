@@ -7,6 +7,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
 #include <fstream>
+#include "darts.h"
 
 //extern board * gboard;
 
@@ -37,3 +38,13 @@ void balloon:: keyPressEvent(QKeyEvent *event){
         }
     }
 }
+
+void balloon:: start_dart(){
+    darts* darts = new darts(); 
+    scene()-> addItem(darts); 
+}
+    
+    
+    
+    
+    
