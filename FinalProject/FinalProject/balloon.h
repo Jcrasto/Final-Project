@@ -21,6 +21,7 @@ public:
 
 public slots:
 
+    void start_dart(); // function that will start the dart objects to move
    //void down();
    //void up();
    //void thow_darts();
