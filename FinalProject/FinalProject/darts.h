@@ -13,7 +13,7 @@ class darts: public QGraphicsPixMapItem
 
 public: 
   explicit darts (QGraphicsItem *parent = 0); 
-  ~darts(); 
+  virtual ~darts(); 
   
 public slots: 
   
