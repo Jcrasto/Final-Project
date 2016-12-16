@@ -16,7 +16,7 @@ public:
   virtual ~darts(); 
   
 public slots: 
-  
+  void move(); //slot that will connect to the timer to move the darts across the screen 
   
 private: 
 
