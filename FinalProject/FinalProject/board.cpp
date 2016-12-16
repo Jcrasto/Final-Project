@@ -72,7 +72,13 @@ board::board(QWidget *parent)
    show();
 
 }
-
+void board:: game_over(){
+   delete bloon; 
+   delete GraphicsScene;
+   
+   QGraphicsTextItem* gg = new QGraphicsTextItem(); 
+   gg-> setPlainText(QString( "Game Over")); 
+}
 
 board::~board()
 {
