@@ -23,11 +23,18 @@ darts::darts(QGraphicsItem* parent): QGraphicsPixMapItem(parent)
   setPixmap(*dart_pic);
   
   QTimer* timer = new QTimer (this);
-  
+  connect ( timer, SIGNAL(), SLOT(move()) ); 
  
  }
  
- 
+void darts:: move(){
+  bool collision = false; 
+  if (pos().y() < 75){
+      if (bloon.pos().y() = pos().y()){
+          collision = true;
+          gboard.game_over(); 
+}
+
 darts::~darts ()
 {
 
